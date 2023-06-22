@@ -1,58 +1,67 @@
+<!DOCTYPE html>
 <html>
-   <head>
-      <title>Java interview questions</title>
-      <style>
-body {
-  background-color: lightblue;
-}
+<head>
+  <title>Java Interview Questions</title>
+  <style>
+    /* CSS styles */
+    .question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
 
-h1 {
-  color: white;
-  text-align: center;
-}
+    .answer {
+      margin-bottom: 20px;
+    }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
-}
-</style>
-   </head>
-   
-   <body>
-      <h1>⭐️ Java interview questions ⭐️</h1>
-      <p>Sure! Here are 200 Java interview questions that cover various topics including collections, basic Java concepts, and tricky questions:
+    .answer p {
+      margin: 0;
+    }
 
-<h3>Collection Questions:</h3>
-         
-1. What is the difference between List and Set in Java?
-2. Explain the difference between ArrayList and LinkedList.
-3. What is the difference between HashMap and HashTable?
-4. How does TreeMap work internally?
-5. What is the difference between Iterator and ListIterator?
-6. Explain the concept of fail-fast and fail-safe iterators.
-7. How does the ConcurrentHashMap achieve thread safety?
-8. What is the purpose of the Comparable interface in Java?
-9. How does PriorityQueue work in Java?
-10. What is the difference between HashSet and TreeSet?
+    .answer-details {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
 
-<h3>Basic Java Questions:</h3>
-         
-1. What are the main features of Java?
-2. Explain the difference between JDK, JRE, and JVM.
-3. What is the difference between checked and unchecked exceptions?
-4. What is the difference between abstract classes and interfaces?
-5. What is the purpose of the 'final' keyword in Java?
-6. What is method overloading and method overriding?
-7. Explain the concept of multithreading in Java.
-8. What are the access modifiers in Java and their differences?
-9. What is the difference between static and instance variables?
-10. Explain the concept of garbage collection in Java.
+    .answer-details p {
+      margin: 0;
+    }
 
-<h3>Java Tricky Questions:</h3>
-1. What will be the output of the following code snippet?
-   String s1 = "Java";
-   String s2 = "Java";
-      
-</p>
+    .question-container {
+      margin-bottom: 30px;
+    }
+
+    .question-container:hover {
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    // JavaScript function to toggle the visibility of answer details
+    function toggleAnswerDetails(index) {
+      var answerDetails = document.getElementById('answer-details-' + index);
+      if (answerDetails.style.display === 'none') {
+        answerDetails.style.display = 'block';
+      } else {
+        answerDetails.style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Java Interview Questions</h1>
+
+  <div class="question-container" onclick="toggleAnswerDetails(1)">
+    <div class="question">1. What is method hiding in Java?</div>
+    <div class="answer">
+      <p>Method hiding occurs when a subclass defines a static method with the same signature as a static method in its superclass. The subclass method does not override the superclass method, but it hides it.</p>
+    </div>
+    <div id="answer-details-1" class="answer-details">
+      <p>Additional details or explanations can go here.</p>
+    </div>
+  </div>
+
+  <!-- Repeat the question container for each question -->
+
 </body>
 </html>
